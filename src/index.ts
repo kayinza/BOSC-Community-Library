@@ -4,6 +4,7 @@
  */
 
 export { ResourceIndex } from './core/ResourceIndex';
+export { LocalizationManager } from './core/LocalizationManager';
 export { validateResource, validateAccessibility, ValidationError } from './utils/validation';
 export * from './types';
 
