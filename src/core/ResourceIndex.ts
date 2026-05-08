@@ -15,12 +15,36 @@ export class ResourceIndex {
 
   /**
    * Add a resource to the index
-   * BUG 1: Missing validation and duplicate handling
+   * Fixed: Added validation and proper indexMap handling
    */
   public addResource(resource: Resource): void {
+    // Check for duplicates
+    if (this.indexMap.has(resource.id)) {
+      throw new Error(`Resource with ID ${resource.id} already exists`);
+    }
+
+    // Validate resource before adding
+    const errors = this.validateResource(resource);
+    if (errors.length > 0) {
+      throw new Error(`Invalid resource: ${errors.join(', ')}`);
+    }
+
     this.resources.push(resource);
-    // BUG: Not updating the indexMap
-    // this.indexMap.set(resource.id, resource);
+    this.indexMap.set(resource.id, resource);
+  }
+
+  private validateResource(resource: Resource): string[] {
+    const errors: string[] = [];
+    
+    if (!resource.id || resource.id.trim() === '') {
+      errors.push('Resource ID is required');
+    }
+    
+    if (!resource.title || resource.title.trim() === '') {
+      errors.push('Resource title is required');
+    }
+    
+    return errors;
   }
 
   /**
