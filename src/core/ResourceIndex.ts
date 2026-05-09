@@ -62,13 +62,55 @@ export class ResourceIndex {
 
   /**
    * Search resources with filters
-   * Missing implementation - needs to be added as feature enhancement
+   * Enhanced: Implemented comprehensive search functionality
    */
   public searchResources(filters: SearchFilters, page: number = 1, pageSize: number = 10): SearchResult {
-    // TODO: Implement search functionality
+    let filteredResources = this.resources.filter(resource => resource.isActive);
+
+    // Apply category filter
+    if (filters.category) {
+      filteredResources = filteredResources.filter(resource => 
+        resource.category === filters.category
+      );
+    }
+
+    // Apply language filter
+    if (filters.language) {
+      filteredResources = filteredResources.filter(resource => 
+        resource.language === filters.language
+      );
+    }
+
+    // Apply tags filter (resource must have at least one matching tag)
+    if (filters.tags && filters.tags.length > 0) {
+      filteredResources = filteredResources.filter(resource => 
+        filters.tags!.some(tag => resource.tags.includes(tag))
+      );
+    }
+
+    // Apply government level filter
+    if (filters.governmentLevel) {
+      filteredResources = filteredResources.filter(resource => 
+        resource.governmentLevel === filters.governmentLevel
+      );
+    }
+
+    // Apply WCAG compliance filter
+    if (filters.wcagCompliant !== undefined) {
+      filteredResources = filteredResources.filter(resource => 
+        resource.accessibility.wcagCompliant === filters.wcagCompliant
+      );
+    }
+
+    // Calculate pagination
+    const totalCount = filteredResources.length;
+    const startIndex = (page - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const paginatedResources = filteredResources.slice(startIndex, endIndex);
+
     return {
-      resources: [],
-      totalCount: 0,
+      resources: paginatedResources,
+      totalCount,
       page,
       pageSize
     };
