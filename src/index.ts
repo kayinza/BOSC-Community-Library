@@ -1,0 +1,12 @@
+/**
+ * BOSC Community Library - Main Entry Point
+ * A professional open source library for public sector transparency
+ */
+
+export { ResourceIndex } from './core/ResourceIndex';
+export { validateResource, validateAccessibility, ValidationError } from './utils/validation';
+export * from './types';
+
+// Version information
+export const VERSION = '1.0.0';
+export const LIBRARY_NAME = 'BOSC Community Library';
