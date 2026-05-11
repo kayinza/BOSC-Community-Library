@@ -25,15 +25,15 @@ export class ResourceIndex {
 
   /**
    * Get resource by ID
-   * BUG 2: Broken logic for inactive resources
+   * Fixed: Corrected logic to return active resources only
    */
   public getResourceById(id: string): Resource | null {
     const resource = this.indexMap.get(id);
-    // BUG: Should check if resource is active, but logic is inverted
-    if (resource && !resource.isActive) {
-      return resource; // This should return null for inactive resources
+    // Fixed: Return resource only if it exists and is active
+    if (resource && resource.isActive) {
+      return resource;
     }
-    return null; // This should return the resource if active
+    return null;
   }
 
   /**
