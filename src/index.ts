@@ -6,6 +6,8 @@
 export { ResourceIndex } from './core/ResourceIndex';
 export { LocalizationManager } from './core/LocalizationManager';
 export { validateResource, validateAccessibility, ValidationError } from './utils/validation';
+export { LRUCache } from './utils/cache';
+export { PerformanceMonitor, measurePerformance, debounce, throttle } from './utils/performance';
 export * from './types';
 
 // Version information
