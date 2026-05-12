@@ -236,6 +236,96 @@ de28afe Complete Phase 4: Sustainability strategy and government proposal
 
 ---
 
+## 📸 Required Screenshots for Audit
+
+**Action Required**: Capture and embed the following screenshots in this submission log to complete the audit trail.
+
+### 1. Git Activity Spread Across Week
+**What to capture**: Git contribution graph showing daily commits across May 4-10, 2026
+**How to capture**:
+1. Visit your GitHub profile: https://github.com/kayinza
+2. Locate the "Green Square" contributions graph
+3. Use your OS screenshot tool (Windows+Shift+S on Windows) to capture the graph
+4. Save as `git-contributions.png`
+**Where to place**: In `SUBMISSION_LOG.md` below this line
+```
+![Git Activity Spread](screenshots/git-contributions.png)
+```
+
+### 2. Resolved Issues Screenshots
+**What to capture**: All 5 closed issue threads showing discussion and resolution
+**Issues to capture**:
+- Issue #12: Resource index map bug
+- Issue #13: Inverted active resource logic
+- Issue #14: Search functionality
+- Issue #15: Localization support
+- Issue #16: Performance optimization
+**How to capture**:
+1. Visit each issue: https://github.com/kayinza/BOSC-Community-Library/issues/12, etc.
+2. Scroll to show issue description, comments, and "Closed" status
+3. Take separate screenshot for each issue (or combine into one image)
+4. Save as `issues-12-16.png`
+**Where to place**:
+```
+![Issue #12 - Closed](screenshots/issue-12.png)
+![Issue #13 - Closed](screenshots/issue-13.png)
+![Issue #14 - Closed](screenshots/issue-14.png)
+![Issue #15 - Closed](screenshots/issue-15.png)
+![Issue #16 - Closed](screenshots/issue-16.png)
+```
+
+### 3. Merged Pull Requests Screenshots
+**What to capture**: All 5 merged PRs showing code changes and merge status
+**PRs to capture**:
+- PR #11: Bug fix - Resource index map
+- PR #17: Bug fix - Active resource logic
+- PR #18: Feature - Search functionality
+- PR #19: Feature - Localization support
+- PR #20: Refactor - Performance optimization
+**How to capture**:
+1. Visit each PR: https://github.com/kayinza/BOSC-Community-Library/pull/11, etc.
+2. Scroll to show "Merged" badge, commits, file changes
+3. Take separate screenshot for each PR (or combine into one image)
+4. Save as `prs-11-17-20.png`
+**Where to place**:
+```
+![PR #11 - Merged](screenshots/pr-11.png)
+![PR #17 - Merged](screenshots/pr-17.png)
+![PR #18 - Merged](screenshots/pr-18.png)
+![PR #19 - Merged](screenshots/pr-19.png)
+![PR #20 - Merged](screenshots/pr-20.png)
+```
+
+### 4. Proof of Participation (Green Square)
+**What to capture**: GitHub contributions graph for exam week (May 4-10, 2026)
+**How to capture**:
+1. Go to https://github.com/kayinza
+2. Ensure the graph shows the correct week (May 4-10, 2026)
+3. Screenshot the entire contributions section
+4. Save as `contributions-graph.png`
+**Where to place**:
+```
+![Contributions Graph - May 4-10, 2026](screenshots/contributions-graph.png)
+```
+
+### 5. Repository Structure Screenshot
+**What to capture**: Full file tree showing professional OSS structure
+**How to capture**:
+1. Visit repository: https://github.com/kayinza/BOSC-Community-Library
+2. Navigate to main branch root
+3. Screenshot showing all top-level files and folders
+4. Save as `repository-structure.png`
+**Where to place**:
+```
+![Repository Structure](screenshots/repository-structure.png)
+```
+
+---
+
+**Important**: Create a `screenshots/` folder in your repository and add all images before final submission. Update the paths above to match your file locations.
+
+---
+
 **Repository URL**: https://github.com/kayinza/BOSC-Community-Library  
 **Live Demo**: [To be deployed]  
 **Documentation**: Complete in repository  
